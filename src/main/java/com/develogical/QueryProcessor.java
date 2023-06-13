@@ -35,11 +35,11 @@ public class QueryProcessor {
       return "WinningTeam";
     }
 
-    if (query.toLowerCase().contains("what is")) {
+    if (query.toLowerCase().contains("what is") && query.toLowerCase().contains("plus")) {
       String[] querySplit = query.split(" ");
+      querySplit[4] = querySplit[4].replace("?", "");
       int a = Integer.parseInt(querySplit[2].strip());
       int b = Integer.parseInt(querySplit[4].strip());
-      querySplit[4] = querySplit[4].replace("?", "");
 
       if(a > b) {
         return Integer.toString(a);
@@ -48,6 +48,15 @@ public class QueryProcessor {
       };
 
     }    
+
+    if (query.toLowerCase().contains("what is") && query.toLowerCase().contains("multiplied")) {
+      String[] querySplit = query.split(" ");
+      querySplit[5] = querySplit[5].replace("?", "");
+      int a = Integer.parseInt(querySplit[2].strip());
+      int b = Integer.parseInt(querySplit[5].strip());
+
+      return Integer.toString(a * b);
+    }
 
     return "";
   }
