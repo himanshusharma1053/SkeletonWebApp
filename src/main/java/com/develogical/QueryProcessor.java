@@ -77,7 +77,7 @@ public class QueryProcessor {
           return Integer.toString(temp);
         }
 
-      return null;
+      return "";
     }
 
     return "";
