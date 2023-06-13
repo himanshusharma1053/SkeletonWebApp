@@ -19,9 +19,9 @@ public class QueryProcessor {
     if (query.toLowerCase().contains("which of the following numbers is the largest:")) {
       String[] numbers = query.split(":");
       String[] numbers2 = numbers[1].split(",");
-      int a = Integer.parseInt(numbers2[0]);
-      int b = Integer.parseInt(numbers2[1]);
-      int c = Integer.parseInt(numbers2[2]);
+      int a = Integer.parseInt(numbers2[0].strip());
+      int b = Integer.parseInt(numbers2[1].strip());
+      int c = Integer.parseInt(numbers2[2].strip());
 
       if(a > b && a > c) {
         return Integer.toString(a);
