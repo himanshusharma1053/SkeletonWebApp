@@ -36,8 +36,8 @@ public class QueryProcessor {
 
     if (query.toLowerCase().contains("what is")) {
       String[] querySplit = query.split(" ");
-      int a = Integer.parseInt(querySplit[2]);
-      int b = Integer.parseInt(querySplit[4]);
+      int a = Integer.parseInt(querySplit[2].strip());
+      int b = Integer.parseInt(querySplit[4].strip());
 
       if(a > b) {
         return Integer.toString(a);
