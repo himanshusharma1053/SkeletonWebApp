@@ -41,7 +41,7 @@ public class QueryProcessor {
 
       if (querySplit.length == 6) {
 
-      querySplit[6] = querySplit[4].replace("?", "");
+      querySplit[6] = querySplit[6].replace("?", "");
       int a = Integer.parseInt(querySplit[2].strip());
       int b = Integer.parseInt(querySplit[4].strip());
       int c = Integer.parseInt(querySplit[6].strip());
@@ -63,24 +63,11 @@ public class QueryProcessor {
     if (query.toLowerCase().contains("to the power of")) {
       String[] querySplit = query.split(" ");
 
-      if (querySplit.length == 6) {
-
-      querySplit[6] = querySplit[4].replace("?", "");
+      querySplit[7] = querySplit[7].replace("?", "");
       int a = Integer.parseInt(querySplit[2].strip());
-      int b = Integer.parseInt(querySplit[4].strip());
-      int c = Integer.parseInt(querySplit[6].strip());
+      int b = Integer.parseInt(querySplit[7].strip());
 
-      return Integer.toString(a + b + c);
-
-      } else {
-
-      querySplit[4] = querySplit[4].replace("?", "");
-      int a = Integer.parseInt(querySplit[2].strip());
-      int b = Integer.parseInt(querySplit[4].strip());
-
-      return Integer.toString(a + b);
-
-      }
+      return Integer.toString((int) Math.pow(a, b));
 
     }   
     
