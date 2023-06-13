@@ -16,7 +16,7 @@ public class QueryProcessor {
       return "WinningTeam";
     }
 
-    if (query.toLowerCase().contains("Which of the following numbers is the largest:")) {
+    if (query.toLowerCase().contains("which of the following numbers is the largest:")) {
       String[] numbers = query.split(":");
       String[] numbers2 = numbers[1].split(",");
       int a = Integer.parseInt(numbers2[0]);
