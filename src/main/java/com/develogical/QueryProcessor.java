@@ -19,7 +19,7 @@ public class QueryProcessor {
     if (query.toLowerCase().contains("which of the following numbers is the largest:")) {
       String[] numbers = query.split(":");
       String[] numbers2 = numbers[1].split(",");
-      numbers2[2].replace("?", "");
+      numbers2[2] = numbers2[2].replace("?", "");
       int a = Integer.parseInt(numbers2[0].strip());
       int b = Integer.parseInt(numbers2[1].strip());
       int c = Integer.parseInt(numbers2[2].strip());
@@ -39,7 +39,7 @@ public class QueryProcessor {
       String[] querySplit = query.split(" ");
       int a = Integer.parseInt(querySplit[2].strip());
       int b = Integer.parseInt(querySplit[4].strip());
-      querySplit[4].replace("?", "");
+      querySplit[4] = querySplit[4].replace("?", "");
 
       if(a > b) {
         return Integer.toString(a);
