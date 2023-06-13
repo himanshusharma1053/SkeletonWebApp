@@ -67,7 +67,7 @@ public class QueryProcessor {
           return Integer.toString(numbers[i]);
         }
 
-      return Integer.toString(a * b);
+      return null;
     }
 
     return "";
