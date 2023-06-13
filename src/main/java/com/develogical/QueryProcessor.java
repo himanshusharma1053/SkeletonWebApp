@@ -24,11 +24,11 @@ public class QueryProcessor {
       int c = Integer.parseInt(numbers2[2]);
 
       if(a > b && a > c) {
-        return a;
+        return a.toString();
       } else if (b > a && b > c) {
-        return b;
+        return b.toString();
       } else if (c > a && c > b) {
-        return c;
+        return c.toString();
       }
      
       return "WinningTeam";
