@@ -72,4 +72,7 @@ public class QueryProcessor {
 
     return "";
   }
+
+}
+
 }
