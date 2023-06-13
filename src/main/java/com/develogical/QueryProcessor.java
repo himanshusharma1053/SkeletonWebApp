@@ -64,7 +64,7 @@ public class QueryProcessor {
         int temp = Integer.parseInt(numbers[i]);
 
         if(temp == 1 || temp == 64 || temp == 4096) {
-          return Integer.toString(numbers[i]);
+          return Integer.toString(temp);
         }
 
       return null;
@@ -72,6 +72,8 @@ public class QueryProcessor {
 
     return "";
   }
+
+  
 
 }
 
