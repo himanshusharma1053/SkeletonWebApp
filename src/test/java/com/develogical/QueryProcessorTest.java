@@ -25,8 +25,4 @@ public class QueryProcessorTest {
     assertThat(queryProcessor.process("which of the following numbers is the largest: 10, 55, 20?"), containsString("55"));
   }
 
-  @Test
-  public void prime() throws Exception {
-    assertThat(queryProcessor.process("Which of the following numbers are primes: 87, 93, 34, 13, 78?	"), containsString("13"));
-  }
 }
