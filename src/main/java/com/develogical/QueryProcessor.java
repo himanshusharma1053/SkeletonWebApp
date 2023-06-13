@@ -34,7 +34,18 @@ public class QueryProcessor {
       return "WinningTeam";
     }
 
-    
+    if (query.toLowerCase().contains("what is")) {
+      String[] querySplit = query.split(" ");
+      int a = Integer.parseInt(querySplit[2]);
+      int b = Integer.parseInt(querySplit[4]);
+
+      if(a > b) {
+        return Integer.toString(a);
+      } else if (b > a) {
+        return Integer.toString(b);
+      };
+
+    }    
 
     return "";
   }
