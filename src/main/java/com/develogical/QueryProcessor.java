@@ -63,7 +63,7 @@ public class QueryProcessor {
       for(int i = 0; i < numbers.length; i++) {
         int temp = Integer.parseInt(numbers[i]);
 
-        if(numbers[i] == 1 || numbers[i] == 64 || numbers[i] == 4096) {
+        if(temp == 1 || temp == 64 || temp == 4096) {
           return Integer.toString(numbers[i]);
         }
 
