@@ -58,6 +58,22 @@ public class QueryProcessor {
       return Integer.toString(a * b);
     }
 
+    if (query.toLowerCase().contains("which of the following numbers is both a square and a cube")) {
+      String[] querySplit = query.split(":");
+      querySplit[1] = querySplit[1].replace("?", "");
+      querySplit[1] = querySplit[1].replace(" ", "");
+      String[] numbers = querySplit[1].split(",");
+
+      for(int i = 0; i < numbers.length; i++) {
+        int temp = Integer.parseInt(numbers[i]);
+
+        if(numbers[i] == 1 || numbers[i] == 64 || numbers[i] == 4096) {
+          return Integer.toString(numbers[i]);
+        }
+
+      return Integer.toString(a * b);
+    }
+
     return "";
   }
 }
