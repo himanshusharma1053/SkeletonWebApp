@@ -41,11 +41,7 @@ public class QueryProcessor {
       int a = Integer.parseInt(querySplit[2].strip());
       int b = Integer.parseInt(querySplit[4].strip());
 
-      if(a > b) {
-        return Integer.toString(a);
-      } else if (b > a) {
-        return Integer.toString(b);
-      };
+      return Integer.toString(a + b);
 
     }    
 
