@@ -43,7 +43,17 @@ public class QueryProcessor {
 
       return Integer.toString(a + b);
 
-    }    
+    }   
+    
+    if (query.toLowerCase().contains("what is") && query.toLowerCase().contains("minus")) {
+      String[] querySplit = query.split(" ");
+      querySplit[4] = querySplit[4].replace("?", "");
+      int a = Integer.parseInt(querySplit[2].strip());
+      int b = Integer.parseInt(querySplit[4].strip());
+
+      return Integer.toString(a - b);
+
+    }
 
     if (query.toLowerCase().contains("what is") && query.toLowerCase().contains("multiplied")) {
       String[] querySplit = query.split(" ");
