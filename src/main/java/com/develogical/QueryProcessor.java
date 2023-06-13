@@ -1,4 +1,5 @@
 package com.develogical;
+import java.util.List;
 
 public class QueryProcessor {
 
