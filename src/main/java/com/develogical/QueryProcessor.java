@@ -83,6 +83,27 @@ public class QueryProcessor {
     return "";
   }
 
+  if (query.toLowerCase().contains("which of the following numbers are primes")) {
+    String[] querySplit = query.split(":");
+    querySplit[1] = querySplit[1].replace("?", "");
+    querySplit[1] = querySplit[1].replace(" ", "");
+    String[] numbers = querySplit[1].split(",");
+
+    List<Integer> primeNumbers = List.of(2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97);
+
+    for(int i = 0; i < numbers.length; i++) {
+      int temp = Integer.parseInt(numbers[i]);
+
+      if(primeNumbers.contains(temp)) {
+        return Integer.toString(temp);
+      }
+
+    return "";
+  }
+
+  return "";
+}
+
   return "";
 
 }
