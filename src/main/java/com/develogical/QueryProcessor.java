@@ -24,15 +24,21 @@ public class QueryProcessor {
       int c = Integer.parseInt(numbers2[2]);
 
       if(a > b && a > c) {
-        return a.toString();
+        return Integer.toString(a);
       } else if (b > a && b > c) {
-        return b.toString();
+        return Integer.toString(b);
       } else if (c > a && c > b) {
-        return c.toString();
+        return Integer.toString(c);
       }
      
       return "WinningTeam";
     }
+
+    if (query.toLowerCase().contains("what is")) {
+      return "William Shakespeare (26 April 1564 - 23 April 1616) was an "
+          + "English poet, playwright, and actor, widely regarded as the greatest "
+          + "writer in the English language and the world's pre-eminent dramatist.";
+    }    
 
     return "";
   }
